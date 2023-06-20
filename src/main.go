@@ -20,7 +20,7 @@ func main() {
 	http.HandleFunc("/page2/", page2)
 	http.HandleFunc("/page3/", page3)
 
-	http.ListenAndServe("weblaba.onrender.com", nil)
+	http.ListenAndServe("", nil)
 }
 
 
