@@ -1,0 +1,28 @@
+{{ define "page2" }}
+
+{{ template "header" }}
+
+{{ range . }}
+
+<section class="container">
+    <div class="row">
+        <div class="col-lg-6">
+        <img width="400" height="260" src="https://cdn-icons-png.flaticon.com/512/191/191531.png" alt="Назва продукту" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+        <h2>{{ .Name }}</h2>
+        <p>Ціна: {{ .Price }}</p>
+        <p>Опис продукту: {{ .Desc }}</p>
+        <p>Кількість: {{ .Count }}</p>
+        <button class="btn btn-primary">Додати в кошик</button>
+        </div>
+    </div>
+</section>
+
+{{ else }}
+    <p>Продуктів на складі немає</p>
+{{ end }} 
+  
+{{ template "footer" }}
+
+{{ end }}
